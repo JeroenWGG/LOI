@@ -1,5 +1,16 @@
 JavaScript, variabelen en gegevens
 Aantekeningen
+
 De relatie tussen Javascript, ECMAscript & JScript is dat het allemaal verschillende namen zijn voor Javascript.
 JScript is de benaming van Microsoft terwijl ECMAscript is bedacht door de European Computer Manufacturer’s Association.
 De naam JavaScript werd bedacht door Netscape.
+
+JavaScript is een client side scripting taal. Dit betekent dat er geen query's worden verstuurd naar servers. Je kan het beste de <script></script> tags net voor de het einde van de body plaatsen, omdat je vaak met elementen werkt die voor het uitvoeren van het script wel moeten bestaan.
+
+Commentaar in JavaScript wordt gebruikt om uitleg te geven bij een stukje code. Zo kan je in JavaScript een comment schrijven met //. Alle wat na de // komt op dezelfde lijn is een comment en wordt dus genegeerd door de browser. Als je een comment wil maken die meerdere lijnen spant moet je de syntax /* comment */ gebruiken. Commments worden vaak door programmeurs gebruikt om tijdelijk een stukje code uit te schakelen.
+
+Met de <noscript></noscript/> tag kan je aangeven wat voor melding getoont moet worden aan browser die scripttaal niet ondersteunen. Zo kan je bijvoorbeeld aangeven dat de browser die script taal niet ondersteund.
+
+De primitieve typen zijn Booleans, Numbers, String. JavaScript is een object geörienteerde taal. Een variabelen kan gebruikt worden om stukjes informatie op te slaan. Hiervoor moeten ze gedeclareerd en daarna gedefineerd worden. Dit kan ook in een lijn door te zeggen var x = "Hallo"; Ze noemen een variabelen ook wel een identifier en een declaratie wordt ook wel een iniatialisatie genoemd.
+
+Een statement is een opdracht in JavaScript. Een statement eindigt meestal met een puntkomma. Het = waarmee een variabel wordt gedeclareerd noemen ze ook wel een "operator". Het is een goede gewoonte om alle variabelen aan het begin van het script te schrijven. Wanneer een variabel wel is gedeclareerd maar geen waarde heeft krijgt het de waarde "undefined".
