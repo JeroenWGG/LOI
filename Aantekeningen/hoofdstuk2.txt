@@ -1,0 +1,5 @@
+JavaScript, variabelen en gegevens
+Aantekeningen
+De relatie tussen Javascript, ECMAscript & JScript is dat het allemaal verschillende namen zijn voor Javascript.
+JScript is de benaming van Microsoft terwijl ECMAscript is bedacht door de European Computer Manufacturer’s Association.
+De naam JavaScript werd bedacht door Netscape.
