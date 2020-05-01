@@ -14,3 +14,7 @@ Met de <noscript></noscript/> tag kan je aangeven wat voor melding getoont moet 
 De primitieve typen zijn Booleans, Numbers, String. JavaScript is een object geörienteerde taal. Een variabelen kan gebruikt worden om stukjes informatie op te slaan. Hiervoor moeten ze gedeclareerd en daarna gedefineerd worden. Dit kan ook in een lijn door te zeggen var x = "Hallo"; Ze noemen een variabelen ook wel een identifier en een declaratie wordt ook wel een iniatialisatie genoemd.
 
 Een statement is een opdracht in JavaScript. Een statement eindigt meestal met een puntkomma. Het = waarmee een variabel wordt gedeclareerd noemen ze ook wel een "operator". Het is een goede gewoonte om alle variabelen aan het begin van het script te schrijven. Wanneer een variabel wel is gedeclareerd maar geen waarde heeft krijgt het de waarde "undefined".
+
+Namen van variabelen mogen letters, cijfers, onderstreeptekens en dollartekens bevatten. Daarnaast mogen ze niet met een cijfer beginnen. Ze mogen wel beginnen met _ of $. Namen van variabelen zijn ook hoofdletter gevoelig. Houdt rekening met de gereserveerde woorden in de namespace.
+
+In JavaScript wordt camelCase gebruikt om spaties te vermijden want die mogen niet in variabelen. 

@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
-<body>
-<h1 id="myH"></h1>
-<script>
-var x;
-<button
-  type="button"
-  onclick='document.getElementById("demo").innerHTML = x'
->
-
-</script>
-</body>
+  <body>
+    <h1 id="myH"></h1>
+    <button type="button" onclick="dropVar()">dropVar</button>
+    <script>
+      var x;
+      function dropVar(x) {
+        document.getElementById("myH").innerHTML = x;
+      }
+    </script>
+  </body>
 </html>
