@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>Insert string</p>
+    <input type="text" id="c" name="c" onchange="displayStuff(this.value)" />
+    <p id="result"></p>
+  </body>
+  <script>
+    function displayStuff(val) {
+      var result = document.querySelector("#result");
+      stringName = val;
+      stringLength = val.length;
+      stringNoSpaces = val.replace(/ /g, "");
+      stringLengthNoSpaces = stringNoSpaces.length;
+      result.innerHTML =
+        stringName +
+        "<br>" +
+        stringLength +
+        "<br>" +
+        stringNoSpaces +
+        "<br>" +
+        stringLengthNoSpaces;
+    }
+  </script>
+</html>
