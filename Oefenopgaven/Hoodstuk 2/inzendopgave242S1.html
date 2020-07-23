@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      Vul twee getallen in en druk op uitrekenen voor de resultaten
+    </p>
+    <label for="x">Getal X:</label>
+    <input type="text" id="x" name="x" />
+    <label for="y">Getal Y:</label>
+    <input type="text" id="y" name="y" />
+    <p id="result"></p>
+    <p id="resultVerschil"></p>
+    <p id="resultVermenigvuldigen"></p>
+    <p id="resultDelen"></p>
+    <p id="resultDan"></p>
+    <button onclick="sumOfXY()">Uitrekenen</button>
+  </body>
+  <script>
+    var invoerX, invoerY;
+    function sumOfXY() {
+      invoerX = document.querySelector("#x");
+      invoerY = document.querySelector("#y");
+      numberX = Number(invoerX.value);
+      numberY = Number(invoerY.value);
+      sum = numberY + numberX;
+      difference = Math.abs(numberY - numberX);
+      product = numberY * numberX;
+      quotiënt = numberY / numberX;
+      document.getElementById("result").innerHTML =
+        `${numberX} en ${numberY} zijn samen ` + sum;
+      document.getElementById("resultVerschil").innerHTML =
+        `Het verschil tussen ${numberX} en ${numberY} is ` + difference;
+      document.getElementById("resultVermenigvuldigen").innerHTML =
+        `${numberX} keer ${numberY} is ` + product;
+      document.getElementById("resultDelen").innerHTML =
+        `${numberX} gedeeld door ${numberY} is ` + quotiënt;
+      if (numberX > numberY) {
+        document.getElementById(
+          "resultDan"
+        ).innerHTML = `${numberX} is groter dan ${numberY}`;
+      } else if (numberX === numberY) {
+        document.getElementById(
+          "resultDan"
+        ).innerHTML = `${numberX} is gelijk aan ${numberY}`;
+      } else {
+        document.getElementById(
+          "resultDan"
+        ).innerHTML = `${numberX} is kleiner dan ${numberY}`;
+      }
+    }
+  </script>
+</html>
