@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" id="input1" />
+    <input type="text" id="input2" />
+    <button type="button" name="button" onclick="averageCalculator()">
+      Calculate max average
+    </button>
+    <div id="result"></div>
+    <script>
+      function averageCalculator() {
+        let input1 = document.querySelector("#input1").value;
+        console.log(input1);
+        let input2 = document.querySelector("#input2").value;
+        console.log(input2);
+        let average = gemiddelde(input1, input2);
+        document.querySelector("#result").innerHTML = average;
+      }
+
+      function gemiddelde(getal1, getal2) {
+        var g = (Number(getal1) + Number(getal2)) / 2;
+        console.log(g);
+        return g;
+      }
+    </script>
+  </body>
+</html>

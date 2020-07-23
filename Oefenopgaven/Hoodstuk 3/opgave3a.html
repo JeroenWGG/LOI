@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" id="input1" />
+    <input type="text" id="input2" />
+    <button type="button" name="button" onclick="maxCalculator()">
+      Calculate average
+    </button>
+    <div id="result"></div>
+    <script>
+      function maxCalculator() {
+        let input1 = document.querySelector("#input1").value;
+        console.log(input1);
+        let input2 = document.querySelector("#input2").value;
+        console.log(input2);
+        let max = max2(input1, input2);
+        document.querySelector("#result").innerHTML = max;
+      }
+
+      function max2(number1, number2) {
+        let getal1 = Number(number1);
+        let getal2 = Number(number2);
+        if (getal1 === getal2) {
+          return "equal";
+        } else if (getal1 > getal2) {
+          return getal1;
+        } else {
+          return getal2;
+        }
+        return g;
+      }
+    </script>
+  </body>
+</html>
