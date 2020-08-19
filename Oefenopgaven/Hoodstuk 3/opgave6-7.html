@@ -8,10 +8,10 @@
       var vak2 = document.getElementById("vak2");
 
       vak1.onfocus = function() {
-        myFunction(vak1, "yellow");
+        myFunction(this, "yellow");
       };
       vak2.onfocus = function() {
-        myFunction(vak2, "red");
+        myFunction(this, "red");
       };
 
       function myFunction(element, kleur) {

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <label for="Maandsalaris">Maandsalaris</label>
+    <input type="text" id="maandSalaris" />
+    <button id="berekenJaarSalaris" type="button" name="button">
+      Jaarsalaris berekenen
+    </button>
+    <input type="text" id="jaarSalaris" />
+    <script>
+      let GetBerekenKnop = document.querySelector("#berekenJaarSalaris");
+
+      GetBerekenKnop.addEventListener("click", berekenSalaris);
+
+      function berekenSalaris() {
+        let GetMaandSalaris = document.querySelector("#maandSalaris").value;
+        let GetJaarSalaris = document.querySelector("#jaarSalaris");
+        let jaarSalaris = Math.round(GetMaandSalaris * 12 * 1.08);
+        GetJaarSalaris.value = jaarSalaris;
+      }
+    </script>
+  </body>
+</html>
