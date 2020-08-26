@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>What number is bigger?</p>
+    <label for="fname">A:</label>
+    <input type="text" id="a" name="a" />
+    <label for="lname">B:</label>
+    <input type="text" id="b" name="b" />
+    <button onclick="biggerThan()">Submit</button>
+    <p id="result"></p>
+  </body>
+  <script>
+    var invoerA, invoerB, numberA, numberB;
+    function biggerThan() {
+      invoerA = document.querySelector("#a");
+      invoerB = document.querySelector("#b");
+      numberA = invoerA.value;
+      numberB = invoerB.value;
+      if (numberA > numberB) {
+        document.getElementById(
+          "result"
+        ).innerHTML = `<p> A (${numberA}) is bigger than B (${numberB})</p>`;
+      } else if (numberA < numberB) {
+        document.getElementById(
+          "result"
+        ).innerHTML = `<p> B (${numberB}) is bigger than A (${numberA})</p>`;
+      } else {
+        document.getElementById(
+          "result"
+        ).innerHTML = `<p> B (${numberB}) is equal to A (${numberA})</p>`;
+      }
+    }
+  </script>
+</html>

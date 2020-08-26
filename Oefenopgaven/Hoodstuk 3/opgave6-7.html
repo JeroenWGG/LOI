@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" id="vak1" />
+    <input type="text" id="vak2" />
+    <script>
+      var vak1 = document.getElementById("vak1");
+      var vak2 = document.getElementById("vak2");
+
+      vak1.onfocus = function() {
+        myFunction(this, "yellow");
+      };
+      vak2.onfocus = function() {
+        myFunction(this, "red");
+      };
+
+      function myFunction(element, kleur) {
+        element.style.background = kleur;
+      }
+    </script>
+  </body>
+</html>

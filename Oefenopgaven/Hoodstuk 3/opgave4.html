@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    Kilometers naar liters
+    <input type="text" id="input1" />
+    <button type="button" name="button" onclick="kilometerNaarLiter()">
+      Uitrekenen</button
+    ><br /><br /><br />
+    Liters naar kilometers
+    <input type="text" id="input2" />
+    <button type="button" name="button" onclick="literNaarKilometer()">
+      Uitrekenen
+    </button>
+    <div id="result"></div>
+    <script>
+      function kilometerNaarLiter() {
+        let input1 = Number(document.querySelector("#input1").value);
+        let liter = 100 / input1;
+        document.querySelector("#result").innerHTML = liter;
+      }
+
+      function literNaarKilometer() {
+        let input2 = Number(document.querySelector("#input2").value);
+        console.log(input2);
+        let kilometer = 100 / input2;
+        document.querySelector("#result").innerHTML = kilometer;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>What number is bigger?</p>
+    <label for="fname">A:</label>
+    <input type="text" id="a" name="a" />
+    <label for="lname">B:</label>
+    <input type="text" id="b" name="b" />
+    <label for="lname">C:</label>
+    <input type="text" id="c" name="c" />
+    <button onclick="biggerThan()">Submit</button>
+    <p id="result"></p>
+  </body>
+  <script>
+    var invoerA, invoerB, invoerC, numberA, numberB, numberC;
+    function biggerThan() {
+      invoerA = document.querySelector("#a");
+      invoerB = document.querySelector("#b");
+      invoerC = document.querySelector("#c");
+      numberA = Number(invoerA.value);
+      numberB = Number(invoerB.value);
+      numberC = Number(invoerC.value);
+      if (numberA > numberB && numberA > numberC) {
+        document.getElementById(
+          "result"
+        ).innerHTML = `<p>A is the biggest number</p>`;
+      } else if (numberB > numberA && numberB > numberC) {
+        document.getElementById(
+          "result"
+        ).innerHTML = `<p>B is the biggest number</p>`;
+      } else if (numberC > numberA && numberC > numberB) {
+        document.getElementById(
+          "result"
+        ).innerHTML = `<p>C is the biggest number</p>`;
+      } else {
+        document.getElementById(
+          "result"
+        ).innerHTML = `<p>There is not a single big number</p>`;
+      }
+    }
+  </script>
+</html>

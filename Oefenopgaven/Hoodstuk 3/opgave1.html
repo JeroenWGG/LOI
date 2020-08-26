@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    Voor een prijs in:
+    <input type="text" id="inputprijs" onchange="myFunction()" />
+    <script>
+      //Event-handler:
+      function myFunction() {
+        var invoervak = document.getElementById("inputprijs");
+        var p = +invoervak.value;
+        berekenZonderBTW(p); //Aanroep van de functie
+      }
+      //Functie:
+      function berekenZonderBTW(prijs) {
+        var prijsZonderBTW = (prijs / 121) * 100;
+        var btw = prijs - prijsZonderBTW;
+
+        alert(
+          "Prijs " +
+            prijs.toFixed(2) +
+            " Prijs zonder btw:" +
+            prijsZonderBTW.toFixed(2) +
+            " (btw: " +
+            btw.toFixed(2) +
+            ")"
+        );
+      }
+    </script>
+  </body>
+</html>
