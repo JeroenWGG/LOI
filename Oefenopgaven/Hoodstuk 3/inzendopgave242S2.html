@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
   <body>
-    <label for="Maandsalaris">Maandsalaris</label>
-    <input type="text" id="maandSalaris" />
-    <button id="berekenJaarSalaris" type="button" name="button">
-      Jaarsalaris berekenen
-    </button>
-    <input type="text" id="jaarSalaris" />
-    <script type="text/javascript" src="opgave9.js"></script>
+    <h1>Inzendopgave 242S2</h1>
+    <label for="bedrag" id="bedragLabel">Voer bedrag in en druk enter:</label>
+    <input type="text" id="bedrag" />
+    <br><br>
+    <label for="totaal">Totaal van ingevoerde bedragen:</label>
+    <input type="text" id="totaal" />
+    <button type="button" name="btwberekenen" id="berekenBtw">Bereken de BTW</button>
+    <br><br>
+    <div id="btw">
+    </div>
+    <div id="totaalZonderBtw">
+    </div>
+    <ul id="result">
+    </ul>
+    <button type="button" name="reset" id="reset">Reset</button>
+    <script type="text/javascript" src="inzendopgave242S2.js"></script>
   </body>
 </html>
