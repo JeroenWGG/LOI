@@ -46,7 +46,7 @@ function checkForNumber(t) {
   return regex.test(t);
 }
 
-//Bijhouden of iemand op bereken btw knop klikt
+//bijhouden of iemand op bereken btw knop klikt
 berekenBtw.addEventListener("click", btwBerekenen);
 
 //daadwerkelijk de btw btw berekenen
@@ -57,9 +57,10 @@ function btwBerekenen() {
   totaalZonderBtwResult.innerHTML = "Het totaalbedrag zonder BTW is " + totaalBedragZonderBtw.toFixed(2);
 }
 
-//Bijhouden of iemand op reset klikt
+//bijhouden of iemand op reset klikt
 reset.addEventListener("click", resetForm);
 
+//formulieren, divjes & variabelen resetten
 function resetForm() {
   btwResult.innerHTML = "";
   totaalZonderBtwResult.innerHTML = "";
