@@ -16,7 +16,7 @@ bedragInput.addEventListener("keyup", function(event){
         if(checkForNumber(this.value)){
           bedragToevoegen(this.value);
           totaalBedragToevoegen(this.value);
-          clearInput();
+          bedragInput.value = "";
         } else {
           alert("Dit is geen getal! Voer een getal in.")
           bedragInput.value = "";
