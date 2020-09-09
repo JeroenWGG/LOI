@@ -51,8 +51,11 @@ berekenBtw.addEventListener("click", btwBerekenen);
 
 //daadwerkelijk de btw btw berekenen
 function btwBerekenen() {
-  btwBedrag = totaalBedrag * 0.21;
+  //Uit feedback kwam dat de volgende berekening niet juist is uitgevoerd, aanpassen
+  btwBedrag = totaalBedrag / 121 * 21;
+  // Om het btw bedrag te krijgen deel ik het bedrag inclusief btw door 121 en dan keer 21.
   totaalBedragZonderBtw = totaalBedrag - btwBedrag;
+  // Bij de volgende stap zou ik het bedrag door 121 kunnen delen en dan keer 100 voor het bedrag zonder btw maar ik haal liever gewoon het btwBedrag van het totaalbedrag af.
   btwResult.innerHTML = "Het BTW bedrag is " + btwBedrag.toFixed(2);
   totaalZonderBtwResult.innerHTML = "Het totaalbedrag zonder BTW is " + totaalBedragZonderBtw.toFixed(2);
 }
