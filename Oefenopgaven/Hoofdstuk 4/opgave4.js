@@ -31,9 +31,20 @@ function removeNumber() {
   outputArray(arrayViewer);
 }
 
-let sortArray = document.querySelector("#sortArray");
-sortArray.addEventListener("click", function () {
-  arrayViewer.sort(function (a, b) {
+let sortArrayA = document.querySelector("#sortArrayA");
+sortArrayA.addEventListener("click", function() {
+  arrayViewer.sort(function(a, b) {
     return a - b;
   });
+  clearArray();
+  outputArray(arrayViewer);
+});
+
+let sortArrayB = document.querySelector("#sortArrayB");
+sortArrayB.addEventListener("click", function() {
+  arrayViewer.sort(function(a, b) {
+    return b - a;
+  });
+  clearArray();
+  outputArray(arrayViewer);
 });
