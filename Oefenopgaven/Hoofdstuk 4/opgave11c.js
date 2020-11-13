@@ -72,7 +72,8 @@ function isSchrikkelJaar(jaartal) {
   if ((jaartal % 4 == 0) & (jaartal % 100 != 0)) {
     isSchrikkel = true;
   }
-  if (jaar % 400 == 0) {
+  if (jaartal % 400 == 0) {
     isSchrikkel = true;
   }
+  return isSchrikkel;
 }
