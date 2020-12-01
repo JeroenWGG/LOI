@@ -4,28 +4,25 @@
     <script async type="text/javascript" src="inzendopgave242S3.js"></script>
   </head>
   <body>
+    <label for="invoerDatum">Datum:</label>
+    <input type="text" id="invoerDatum" placeholder="Voer een datum in" />
+    <div class="errorFieldDate"></div>
+    <br /><br />
+    <label for="invoerDatum">Bedrag:</label>
+    <input type="text" id="invoerBedrag" placeholder="Voer een bedrag in" />
+    <div class="errorFieldBedrag"></div>
+    <br /><br />
+    <label for="invoerRentepercentage">Rentepercentage:</label>
     <input
       type="text"
-      name=""
-      value=""
-      id="invoerDatum"
-      placeholder="Geboortedatum"
-    /><br /><br />
-    <input
-      type="text"
-      name=""
-      value=""
-      id="input2"
-      placeholder="Bedrag"
-    /><br /><br />
-    <input
-      type="text"
-      name=""
-      value=""
-      id="input3"
-      placeholder="Rentepercentage"
-    /><br /><br />
-    <button type="button" name="button">Knop</button>
-    <div class="errorField"></div>
+      id="invoerRentepercentage"
+      placeholder="Voer een rentepercentage in"
+    />
+    <div class="errorFieldRentepercentage"></div>
+    <br /><br />
+    <button type="button" name="button" class="calculateButton">
+      Berekenen
+    </button>
+    <div id="result"></div>
   </body>
 </html>
