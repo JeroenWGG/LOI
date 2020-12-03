@@ -1,7 +1,7 @@
 //Controleren van percentage
 let invoerRentepercentage = document.querySelector("#invoerRentepercentage");
 let getErrorPercentage = document.querySelector(".errorFieldRentepercentage");
-invoerRentepercentage.onchange = checkPercentage;
+let getResult = document.querySelector("#result");
 
 function checkPercentage() {
   let percentage = invoerRentepercentage.value;
@@ -23,7 +23,6 @@ function checkPercentage() {
 //Controleren van bedrag
 let invoerBedrag = document.querySelector("#invoerBedrag");
 let getErrorBedrag = document.querySelector(".errorFieldBedrag");
-invoerBedrag.onchange = checkBedrag;
 
 function checkBedrag() {
   let bedrag = invoerBedrag.value;
@@ -49,7 +48,6 @@ function isNumeric(n) {
 //Controleren van datum
 let invoerDatum = document.querySelector("#invoerDatum");
 let getErrorDatum = document.querySelector(".errorFieldDate");
-invoerDatum.onchange = checkDate;
 
 function checkDate() {
   let datum = invoerDatum.value;
@@ -141,39 +139,46 @@ function isSchrikkelJaar(jaartal) {
   return isSchrikkel;
 }
 
-//Berekenen van saldo verdubbeling
-document.querySelector(".calculateButton").addEventListener("click", calculateTillDouble);
-
+//berekenen van saldo verdubbeling
+document
+  .querySelector(".calculateButton")
+  .addEventListener("click", calculateTillDouble);
 
 function calculateTillDouble() {
-   //set starting variables
-let getResult = document.querySelector("#result");
-let startBedrag = invoerBedrag.value;
-let bedrag = Number(invoerBedrag.value);
-let percentage = invoerRentepercentage.value;
-let percentageZonder = percentage.replace(/\% ?/g, "") / 100;
-//change date into date object
-let datum = invoerDatum.value;
-let datumArray = datum.split("-");
-let datumObject = new Date(datumArray[2],datumArray[1],datumArray[0]);
+  if(checkPercentage() === true && checkBedrag() === true && checkDate() === true){
+  //set starting variables
+  let startBedrag = invoerBedrag.value;
+  let bedrag = Number(invoerBedrag.value);
+  let percentage = invoerRentepercentage.value;
+  let percentageZonder = percentage.replace(/\% ?/g, "") / 100;
+  //change date into date object
+  let datum = invoerDatum.value;
+  let datumArray = datum.split("-");
+  let datumObject = new Date(datumArray[2], datumArray[1], datumArray[0]);
   console.log(startBedrag * 2 > bedrag);
   console.log(percentageZonder);
-  if(startBedrag * 2 > bedrag){
-    CalculateForYearAndReturn();
+  getResult.innerHTML = "";
+  for (;startBedrag * 2 > bedrag;) {
+    bedrag = CalculateForYearAndReturn();
+    datumObject.setFullYear(datumObject.getFullYear() + 1);
   }
 
-  
-  function CalculateForYearAndReturn(){
-    bedrag = bedrag + (bedrag * percentageZonder);
-    
-    getResult.append(
-    "Het bedrag is €" +
-      bedrag +
-      " op " +
-      datumObject.getFullYear() +
-      " met een rentepercentage van " +
-      percentage
-  );
-
+  function CalculateForYearAndReturn() {
+    bedrag = bedrag + bedrag * percentageZonder;
+    let node = document.createElement("LI");
+    let textnode = document.createTextNode(
+      "Het bedrag is €" +
+        bedrag.toFixed(2) +
+        " op " +
+        datumObject.getFullYear() +
+        " met een rentepercentage van " +
+        percentage
+    );
+    node.appendChild(textnode);
+    getResult.appendChild(node);
+    return bedrag;
+    }
+  } else{
+    getResult.innerHTML = "";
   }
 }
