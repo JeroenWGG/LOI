@@ -5,19 +5,43 @@
   </head>
   <body>
     <div id="container">
+      <table id="tableContainer">
+        <tr>
+          <td>Voornaam</td>
+          <td>Achternaam</td>
+          <td>Aantal punten</td>
+        </tr>
+        <tr>
+          <td>Jan</td>
+          <td>Haas</td>
+          <td>23</td>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>Kip</td>
+          <td>34</td>
+        </tr>
+        <tr>
+          <td>Hannus</td>
+          <td>Vogel</td>
+          <td>23</td>
+        </tr>
+        <tr>
+          <td>Brendon</td>
+          <td>Kei</td>
+          <td>234</td>
+        </tr>
+      </table>
+      <br />
       <form id="formContainer" action="">
-        <select class="selectVoornaam" name="voorNaam">
-          <option value="Jan">Jan</option>
-          <option value="Piet">Piet</option>
-          <option value="Peter">Peter</option> </select
-        ><br /><br />
-        <select class="selectAchternaam" name="achterNaam">
-          <option value="Haas">Haas</option>
-          <option value="Kip">Kip</option>
-          <option value="Vogel">Vogel</option> </select
-        ><br /><br />
+        <label for="">Voornaam:</label>
+        <input type="text" id="voornaamInput" /><br /><br />
+        <label for="">Achternaam:</label>
+        <input type="text" id="achternaamInput" /><br /><br />
+        <label for="">Punten:</label>
+        <input type="text" id="puntenInput" /><br /><br />
         <button type="button" name="button" id="verstuurKnop">
-          Toon uw keuze
+          Voeg toe aan tabel
         </button>
       </form>
       <div class="output"></div>
