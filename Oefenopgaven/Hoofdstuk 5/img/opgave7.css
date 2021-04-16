@@ -1,0 +1,22 @@
+#formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#formContainer input {
+  max-width: 200px;
+  margin: 15px 0;
+}
+
+#formContainer select {
+  max-width: 200px;
+  margin-bottom: 15px;
+}
+
+#formContainer button {
+  max-width: 200px;
+}
+
+.container {
+  width: 960px;
+}
